@@ -93,11 +93,13 @@ nav {
   padding: 22px 0;
 }
 
-.logo img {
-  height: 48px;   /* slightly smaller for balance */
-  width: auto;
-  display: block;
+/* FORCE LOGO SIZE */
+header .logo img {
+  height: 42px !important;
+  width: auto !important;
+  max-width: none !important;
 }
+
 
 /* =========================
    NAV LINKS
@@ -316,4 +318,17 @@ footer p {
   .section {
     padding: 80px 0;
   }
+}
+/* FORCE HERO COLOR */
+.hero {
+  background: linear-gradient(135deg, #1F2A44, #2e4a7a) !important;
+  color: #ffffff !important;
+}
+
+.hero h1 {
+  color: #ffffff !important;
+}
+
+.hero p {
+  color: #e6e6e6 !important;
 }
