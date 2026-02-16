@@ -58,10 +58,9 @@ p {
    TOP CONTACT BAR
 ========================= */
 .top-bar {
-  background-color: #f8f8f8;
+  background-color: #1F2A44;
   padding: 8px 0;
   font-size: 0.9rem;
-  border-bottom: 1px solid #eee;
 }
 
 .top-contact {
@@ -71,7 +70,7 @@ p {
 }
 
 .top-contact a {
-  color: #1F2A44;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -95,11 +94,14 @@ nav {
 }
 
 .logo img {
-  height: 55px;
+  height: 48px;   /* slightly smaller for balance */
   width: auto;
   display: block;
 }
 
+/* =========================
+   NAV LINKS
+========================= */
 .nav-links {
   display: flex;
 }
@@ -117,15 +119,17 @@ nav {
 }
 
 /* =========================
-   HERO (LIGHT LUXURY)
+   HERO (DEPTH RESTORED)
 ========================= */
 .hero {
-  background: #ffffff;
+  background: linear-gradient(to right, #1F2A44, #2c4b7c);
   text-align: center;
-  padding: 160px 20px 120px 20px;
+  padding: 150px 20px 120px 20px;
+  color: #ffffff;
 }
 
 .hero h1 {
+  color: #ffffff;
   max-width: 900px;
   margin: 0 auto 20px auto;
 }
@@ -140,7 +144,7 @@ nav {
 .hero p {
   max-width: 650px;
   margin: 0 auto 40px auto;
-  color: #666;
+  color: #e6e6e6;
   font-size: 1.1rem;
 }
 
@@ -168,7 +172,7 @@ nav {
   display: inline-block;
   padding: 14px 30px;
   border: 2px solid #C6A85E;
-  color: #C6A85E;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
@@ -189,7 +193,7 @@ nav {
 }
 
 .section-light {
-  background: #fafafa;
+  background: #f5f7fb;
 }
 
 .section-divider {
@@ -218,7 +222,7 @@ nav {
 }
 
 /* =========================
-   CARDS (SOFT LUXURY)
+   CARDS
 ========================= */
 .card {
   background: #ffffff;
@@ -267,14 +271,14 @@ textarea {
    FOOTER
 ========================= */
 footer {
-  background: #fafafa;
+  background: #1F2A44;
   text-align: center;
   padding: 60px 20px;
-  border-top: 1px solid #eee;
+  color: #ffffff;
 }
 
 footer p {
-  color: #777;
+  color: #cccccc;
   margin-bottom: 6px;
   font-size: 0.95rem;
 }
@@ -312,10 +316,4 @@ footer p {
   .section {
     padding: 80px 0;
   }
-}
-.logo img {
-  height: 55px;
-  width: auto;
-  max-width: 100%;
-  display: block;
 }
