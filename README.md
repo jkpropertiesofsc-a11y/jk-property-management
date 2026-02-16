@@ -1,1 +1,1 @@
-# jk-property-management
+# jk-propertymanagement
