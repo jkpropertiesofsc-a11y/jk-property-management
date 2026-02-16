@@ -45,6 +45,37 @@ p {
 }
 
 /* =========================
+   TOP CONTACT BAR
+========================= */
+.top-bar {
+  background-color: #1F2A44;
+  color: #ffffff;
+  padding: 8px 0;
+  font-size: 0.9rem;
+}
+
+.top-contact {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+.top-contact span {
+  opacity: 0.5;
+}
+
+.top-contact a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.top-contact a:hover {
+  color: #C6A85E;
+}
+
+/* =========================
    LAYOUT STRUCTURE
 ========================= */
 .container {
@@ -62,8 +93,13 @@ p {
 }
 
 /* =========================
-   NAVIGATION
+   HEADER & NAVIGATION
 ========================= */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -71,7 +107,17 @@ nav {
   padding: 25px 0;
 }
 
-nav a {
+.logo img {
+  height: 55px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
   text-decoration: none;
   margin-left: 30px;
   font-weight: 500;
@@ -79,7 +125,7 @@ nav a {
   transition: color 0.3s ease;
 }
 
-nav a:hover {
+.nav-links a:hover {
   color: #C6A85E;
 }
 
@@ -164,7 +210,7 @@ nav a:hover {
 }
 
 /* =========================
-   CARDS (LUXURY STYLE)
+   CARDS
 ========================= */
 .card {
   background: #ffffff;
@@ -240,10 +286,21 @@ footer p {
 
   nav {
     flex-direction: column;
+    gap: 15px;
   }
 
-  nav a {
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links a {
     margin: 10px 0;
+  }
+
+  .top-contact {
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
   }
 
   .hero {
