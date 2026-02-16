@@ -313,3 +313,9 @@ footer p {
     padding: 80px 0;
   }
 }
+.logo img {
+  height: 55px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
