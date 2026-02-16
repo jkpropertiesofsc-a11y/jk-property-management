@@ -7,12 +7,25 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #ffffff;
   color: #1F2A44;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* =========================
@@ -31,8 +44,19 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: #0F1B2E;
+  position: relative;
+}
+
+/* Gold accent line under section headings */
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #C6A85E;
+  margin-top: 15px;
 }
 
 h3 {
@@ -48,16 +72,7 @@ p {
 }
 
 /* =========================
-   CONTAINER
-========================= */
-.container {
-  max-width: 1150px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* =========================
-   TOP CONTACT BAR
+   TOP BAR
 ========================= */
 .top-bar {
   background-color: #0F1B2E;
@@ -75,6 +90,7 @@ p {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .top-contact a:hover {
@@ -82,25 +98,33 @@ p {
 }
 
 /* =========================
-   HEADER
+   STICKY HEADER
 ========================= */
 header {
   background: #ffffff;
   border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 0;
+  padding: 20px 0;
 }
 
-/* LOGO SIZE (Balanced & Professional) */
+/* Larger Premium Logo */
 .logo img {
-  height: 95px;
+  height: 115px;
   width: auto;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.03);
 }
 
 /* NAV LINKS */
@@ -113,7 +137,24 @@ nav {
   text-decoration: none;
   font-weight: 600;
   color: #0F1B2E;
+  position: relative;
   transition: color 0.3s ease;
+}
+
+/* Gold underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #C6A85E;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .nav-links a:hover {
@@ -124,22 +165,18 @@ nav {
    HERO SECTION
 ========================= */
 .hero {
-  background: linear-gradient(135deg, #0F1B2E, #1F3A63);
+  position: relative;
+  background: linear-gradient(rgba(15,27,46,0.85), rgba(15,27,46,0.85)),
+              url('hero-bg.jpg') center/cover no-repeat;
   text-align: center;
-  padding: 150px 20px 130px 20px;
+  padding: 160px 20px 130px 20px;
   color: #ffffff;
 }
 
 .hero h1 {
   max-width: 900px;
   margin: 0 auto 20px auto;
-}
-
-.hero-divider {
-  width: 70px;
-  height: 3px;
-  background: #C6A85E;
-  margin: 25px auto 30px auto;
+  animation: fadeUp 1s ease forwards;
 }
 
 .hero p {
@@ -147,6 +184,7 @@ nav {
   margin: 0 auto 40px auto;
   color: #E5E8EF;
   font-size: 1.1rem;
+  animation: fadeUp 1.2s ease forwards;
 }
 
 /* =========================
@@ -167,6 +205,7 @@ nav {
 
 .btn-primary:hover {
   background: #b8964f;
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
@@ -184,6 +223,7 @@ nav {
 .btn-secondary:hover {
   background: #C6A85E;
   color: #ffffff;
+  transform: translateY(-2px);
 }
 
 /* =========================
@@ -194,7 +234,6 @@ nav {
   background: #ffffff;
 }
 
-/* Soft Blue Neutral Section */
 .section.light {
   background: #F3F6FA;
 }
@@ -225,12 +264,12 @@ nav {
   padding: 35px;
   border-radius: 8px;
   border: 1px solid #E6ECF2;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.07);
 }
 
 /* =========================
@@ -280,16 +319,26 @@ footer p {
 }
 
 /* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
 
   h1 {
     font-size: 2.2rem;
-  }
-
-  .hero {
-    padding: 120px 20px 80px 20px;
   }
 
   nav {
@@ -305,15 +354,15 @@ footer p {
     margin: 8px 0;
   }
 
-  .top-contact {
-    justify-content: center;
+  .logo img {
+    height: 85px;
   }
 
   .section {
     padding: 80px 0;
   }
 
-  .logo img {
-    height: 75px;
+  .top-contact {
+    justify-content: center;
   }
 }
