@@ -30,7 +30,7 @@ h1 {
 
 h2 {
   font-size: 2.2rem;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 h3 {
@@ -86,6 +86,32 @@ p {
 
 .section {
   padding: 120px 0;
+  position: relative;
+}
+
+/* Subtle divider between sections */
+.section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e5e5e5, transparent);
+}
+
+.section:last-of-type::after {
+  display: none;
+}
+
+/* Gold accent divider under headings */
+.section-divider {
+  width: 80px;
+  height: 3px;
+  background: #C6A85E;
+  margin: 30px auto 0 auto;
+  border-radius: 2px;
 }
 
 .section.dark {
@@ -130,28 +156,58 @@ nav {
 }
 
 /* =========================
-   HERO SECTION
+   ULTRA-LUXURY HERO
 ========================= */
 .hero {
-  background: linear-gradient(rgba(31,42,68,0.85), rgba(31,42,68,0.85)),
-              url('home-hero.jpg');
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  background: url('home-hero.jpg') center/cover no-repeat;
   color: #ffffff;
-  padding: 160px 20px;
+  padding: 180px 20px;
   text-align: center;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      rgba(10, 18, 40, 0.75),
+      rgba(10, 18, 40, 0.85)
+  );
+  z-index: 1;
+}
+
+/* Gold accent line */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: #C6A85E;
+  z-index: 2;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
 }
 
 .hero h1 {
+  font-size: 3.4rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 25px;
   color: #ffffff;
-  max-width: 900px;
-  margin: 0 auto 25px auto;
 }
 
 .hero p {
-  color: #dddddd;
-  max-width: 650px;
-  margin: 0 auto 40px auto;
+  font-size: 1.15rem;
+  color: #e2e2e2;
+  margin-bottom: 40px;
 }
 
 /* =========================
@@ -272,38 +328,20 @@ footer p {
 }
 
 /* =========================
-   RESPONSIVE DESIGN
+   ELEGANT HERO ANIMATION
 ========================= */
-@media (max-width: 768px) {
-
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  .section {
-    padding: 80px 0;
-  }
-
-  nav {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-  }
-
-  .nav-links a {
-    margin: 10px 0;
-  }
-
-  .top-contact {
-    justify-content: center;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .hero {
-    padding: 120px 20px;
-  }
+.hero h1,
+.hero p,
+.btn-primary,
+.btn-secondary {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
 }
+
+.hero h1 { animation-delay: 0.3s; }
+.hero p { animation-delay: 0.6s; }
+.btn-primary { animation-delay: 0.9s; }
+.btn-secondary { animation-delay: 1.1s; }
+
+@keyfram
