@@ -25,7 +25,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
 /* =========================
@@ -49,7 +49,6 @@ h2 {
   position: relative;
 }
 
-/* Gold accent line under section headings */
 h2::after {
   content: "";
   display: block;
@@ -72,7 +71,7 @@ p {
 }
 
 /* =========================
-   TOP BAR
+   TOP CONTACT BAR
 ========================= */
 .top-bar {
   background-color: #0F1B2E;
@@ -102,7 +101,7 @@ p {
 ========================= */
 header {
   background: #ffffff;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #E5E8EF;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -112,12 +111,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 24px 0;
 }
 
-/* Larger Premium Logo */
+/* Premium Larger Logo */
 .logo img {
-  height: 115px;
+  height: 135px;   /* Prominent but refined */
   width: auto;
   display: block;
   transition: transform 0.3s ease;
@@ -127,13 +126,16 @@ nav {
   transform: scale(1.03);
 }
 
-/* NAV LINKS */
+/* =========================
+   NAVIGATION
+========================= */
 .nav-links {
   display: flex;
+  align-items: center;
 }
 
 .nav-links a {
-  margin-left: 30px;
+  margin-left: 35px;
   text-decoration: none;
   font-weight: 600;
   color: #0F1B2E;
@@ -141,7 +143,6 @@ nav {
   transition: color 0.3s ease;
 }
 
-/* Gold underline animation */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -149,7 +150,7 @@ nav {
   height: 2px;
   background: #C6A85E;
   left: 0;
-  bottom: -5px;
+  bottom: -6px;
   transition: width 0.3s ease;
 }
 
@@ -165,26 +166,22 @@ nav {
    HERO SECTION
 ========================= */
 .hero {
-  position: relative;
-  background: linear-gradient(rgba(15,27,46,0.85), rgba(15,27,46,0.85)),
-              url('hero-bg.jpg') center/cover no-repeat;
+  background: #2F3E55;
   text-align: center;
-  padding: 160px 20px 130px 20px;
+  padding: 170px 20px 130px 20px;
   color: #ffffff;
 }
 
 .hero h1 {
   max-width: 900px;
-  margin: 0 auto 20px auto;
-  animation: fadeUp 1s ease forwards;
+  margin: 0 auto 25px auto;
 }
 
 .hero p {
   max-width: 650px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 45px auto;
   color: #E5E8EF;
   font-size: 1.1rem;
-  animation: fadeUp 1.2s ease forwards;
 }
 
 /* =========================
@@ -192,7 +189,7 @@ nav {
 ========================= */
 .btn-primary {
   display: inline-block;
-  padding: 14px 30px;
+  padding: 14px 32px;
   background: #C6A85E;
   color: #ffffff;
   text-decoration: none;
@@ -210,7 +207,7 @@ nav {
 
 .btn-secondary {
   display: inline-block;
-  padding: 14px 30px;
+  padding: 14px 32px;
   border: 2px solid #C6A85E;
   color: #ffffff;
   text-decoration: none;
@@ -239,7 +236,7 @@ nav {
 }
 
 /* =========================
-   GRID
+   GRID LAYOUT
 ========================= */
 .grid-3,
 .grid-4 {
@@ -257,11 +254,11 @@ nav {
 }
 
 /* =========================
-   CARDS
+   SERVICE CARDS
 ========================= */
 .card {
   background: #ffffff;
-  padding: 35px;
+  padding: 40px;
   border-radius: 8px;
   border: 1px solid #E6ECF2;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -319,20 +316,6 @@ footer p {
 }
 
 /* =========================
-   ANIMATIONS
-========================= */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
@@ -355,7 +338,7 @@ footer p {
   }
 
   .logo img {
-    height: 85px;
+    height: 95px;
   }
 
   .section {
