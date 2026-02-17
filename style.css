@@ -1,6 +1,6 @@
-/* =====================================================
-   GLOBAL RESET
-===================================================== */
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -11,12 +11,13 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: #ffffff;
   color: #1F2A44;
-  line-height: 1.6;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* =====================================================
+/* =========================
    TYPOGRAPHY
-===================================================== */
+========================= */
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
@@ -25,7 +26,6 @@ h1, h2, h3 {
 h1 {
   font-size: 3rem;
   color: #ffffff;
-  line-height: 1.2;
 }
 
 h2 {
@@ -42,23 +42,23 @@ h3 {
 p {
   font-size: 1.05rem;
   color: #555;
+  margin-bottom: 15px;
 }
 
-/* =====================================================
+/* =========================
    CONTAINER
-===================================================== */
+========================= */
 .container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 30px;
 }
 
-/* =====================================================
-   TOP BAR
-===================================================== */
+/* =========================
+   TOP CONTACT BAR
+========================= */
 .top-bar {
   background-color: #0E2A47;
-  color: #ffffff;
   padding: 10px 0;
   font-size: 0.9rem;
 }
@@ -66,7 +66,7 @@ p {
 .top-contact {
   display: flex;
   justify-content: flex-end;
-  gap: 20px;
+  gap: 15px;
 }
 
 .top-contact a {
@@ -75,166 +75,155 @@ p {
 }
 
 .top-contact a:hover {
-  color: #D4AF37;
+  color: #C6A85E;
 }
 
-/* =====================================================
-   FLOATING GLASS HEADER
-===================================================== */
+/* =========================
+   HEADER
+========================= */
 header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.75);
-  border-bottom: 2px solid #D4AF37;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
+  background: #ffffff;
+  border-bottom: 3px solid #C6A85E;
 }
 
-/* =====================================================
-   NAVIGATION
-===================================================== */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 0;
-  position: relative;
+  padding: 35px 0;
 }
 
-/* =====================================================
-   LUXURY OVERLAPPING LOGO
-===================================================== */
-.logo {
-  position: relative;
-}
-
+/* 🔥 DOMINANT LUXURY LOGO */
 .logo img {
-  height: 170px; /* Larger premium size */
+  height: 210px;
   width: auto;
-  position: relative;
-  top: 40px; /* This creates the overlap into hero */
-  z-index: 10;
-
-  /* Gold glow */
-  filter: drop-shadow(0 0 6px rgba(212,175,55,0.6))
-          drop-shadow(0 0 14px rgba(212,175,55,0.4));
-  transition: 0.3s ease;
+  display: block;
+  object-fit: contain;
+  background: transparent;
 }
 
-.logo img:hover {
-  transform: scale(1.03);
-}
-
-/* =====================================================
-   NAV LINKS
-===================================================== */
+/* =========================
+   NAVIGATION
+========================= */
 .nav-links {
   display: flex;
-  gap: 40px;
 }
 
 .nav-links a {
+  margin-left: 35px;
   text-decoration: none;
   font-weight: 600;
   color: #1F2A44;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #D4AF37;
+  color: #C6A85E;
 }
 
-/* =====================================================
+/* =========================
    HERO SECTION
-===================================================== */
+========================= */
 .hero {
-  background: #2F415E;
+  background: #2E405C;
   text-align: center;
-  padding: 180px 20px 150px 20px; /* extra top padding for overlap */
-  position: relative;
+  padding: 160px 20px 140px 20px;
+}
+
+.hero h1 {
+  max-width: 900px;
+  margin: 0 auto 25px auto;
 }
 
 .hero-divider {
   width: 80px;
   height: 3px;
-  background: #D4AF37;
-  margin: 25px auto;
+  background: #C6A85E;
+  margin: 30px auto 35px auto;
 }
 
 .hero p {
   max-width: 650px;
-  margin: 0 auto 40px auto;
-  color: #e2e2e2;
+  margin: 0 auto 45px auto;
+  color: #e0e0e0;
+  font-size: 1.1rem;
 }
 
-/* =====================================================
+/* =========================
    BUTTONS (MATCHING GOLD)
-===================================================== */
+========================= */
 .btn-primary,
 .btn-secondary {
   display: inline-block;
-  padding: 16px 36px;
-  background: #D4AF37;
+  padding: 16px 38px;
+  background: #C6A85E;
   color: #ffffff;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 4px;
   font-weight: 600;
-  transition: 0.3s ease;
+  letter-spacing: 0.5px;
   margin: 10px;
+  transition: all 0.3s ease;
+  border: 2px solid #C6A85E;
 }
 
 .btn-primary:hover,
 .btn-secondary:hover {
-  background: #C39A2C;
-  transform: translateY(-2px);
+  background: #b8964f;
+  border-color: #b8964f;
 }
 
-/* =====================================================
+/* =========================
    SECTIONS
-===================================================== */
+========================= */
 .section {
   padding: 110px 0;
 }
 
 .section.light {
-  background: #f8f8f8;
+  background: #f9f9f9;
 }
 
-/* =====================================================
+/* =========================
    GRID LAYOUT
-===================================================== */
-.grid-3 {
+========================= */
+.grid-3,
+.grid-4 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 35px;
   margin-top: 50px;
 }
 
-/* =====================================================
-   GOLD TRIM SERVICE BOXES
-===================================================== */
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* =========================
+   SERVICE CARDS WITH GOLD TRIM
+========================= */
 .card {
   background: #ffffff;
-  padding: 45px;
-  border-radius: 10px;
-  border: 2px solid #D4AF37;
-  transition: 0.3s ease;
+  padding: 40px;
+  border-radius: 8px;
+  border: 2px solid #C6A85E;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
-  border-color: #C39A2C;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
 }
 
-/* =====================================================
+/* =========================
    CONTACT FORM
-===================================================== */
+========================= */
 .contact form {
-  max-width: 600px;
-  margin: auto;
+  max-width: 650px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -242,52 +231,74 @@ nav {
 
 input,
 textarea {
-  padding: 14px;
+  padding: 16px;
   border: 1px solid #ddd;
-  border-radius: 6px;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: #D4AF37;
+  border-color: #C6A85E;
 }
 
-/* =====================================================
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* =========================
    FOOTER
-===================================================== */
+========================= */
 footer {
   background: #0E2A47;
   text-align: center;
-  padding: 60px 20px;
+  padding: 70px 20px;
   color: #ffffff;
 }
 
-/* =====================================================
-   MOBILE RESPONSIVE
-===================================================== */
+footer p {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
 @media (max-width: 768px) {
+
+  h1 {
+    font-size: 2.2rem;
+  }
 
   nav {
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
   }
 
   .logo img {
-    height: 130px;
-    top: 20px;
+    height: 160px;
   }
 
   .nav-links {
     flex-direction: column;
-    gap: 12px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+  }
+
+  .top-contact {
+    justify-content: center;
   }
 
   .hero {
-    padding: 150px 20px 110px 20px;
+    padding: 120px 20px 100px 20px;
   }
 
-  h1 {
-    font-size: 2.2rem;
+  .section {
+    padding: 80px 0;
   }
 }
