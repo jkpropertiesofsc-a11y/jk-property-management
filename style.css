@@ -1,5 +1,5 @@
 /* =====================================================
-   RESET
+   GLOBAL RESET
 ===================================================== */
 * {
   margin: 0;
@@ -11,8 +11,7 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: #ffffff;
   color: #1F2A44;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
 }
 
 /* =====================================================
@@ -21,28 +20,28 @@ body {
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
-  color: #1F2A44;
 }
 
 h1 {
   font-size: 3rem;
+  color: #ffffff;
   line-height: 1.2;
 }
 
 h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  color: #1F2A44;
 }
 
 h3 {
   font-size: 1.2rem;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 p {
   font-size: 1.05rem;
   color: #555;
-  margin-bottom: 15px;
 }
 
 /* =====================================================
@@ -50,7 +49,7 @@ p {
 ===================================================== */
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding: 0 30px;
 }
 
@@ -59,9 +58,9 @@ p {
 ===================================================== */
 .top-bar {
   background-color: #0E2A47;
+  color: #ffffff;
   padding: 10px 0;
   font-size: 0.9rem;
-  color: #ffffff;
 }
 
 .top-contact {
@@ -73,7 +72,6 @@ p {
 .top-contact a {
   color: #ffffff;
   text-decoration: none;
-  font-weight: 500;
 }
 
 .top-contact a:hover {
@@ -84,7 +82,7 @@ p {
    HEADER
 ===================================================== */
 header {
-  background: #ffffff;
+  background: #ffffff;  /* clean white behind logo */
   border-bottom: 2px solid #D4AF37;
 }
 
@@ -92,14 +90,17 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 0;
+  padding: 20px 0;
 }
 
-/* 1000% Larger Logo */
+/* ===========================
+   LARGE DOMINANT LOGO
+=========================== */
 .logo img {
-  height: 90px;
+  height: 140px;       /* Increased size */
   width: auto;
   display: block;
+  object-fit: contain;
 }
 
 /* Navigation */
@@ -112,7 +113,7 @@ nav {
   text-decoration: none;
   font-weight: 600;
   color: #1F2A44;
-  transition: color 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -120,19 +121,12 @@ nav {
 }
 
 /* =====================================================
-   HERO
+   HERO SECTION
 ===================================================== */
 .hero {
   background: #2F415E;
   text-align: center;
   padding: 150px 20px;
-  color: #ffffff;
-}
-
-.hero h1 {
-  color: #ffffff;
-  max-width: 900px;
-  margin: 0 auto 20px auto;
 }
 
 .hero-divider {
@@ -146,7 +140,6 @@ nav {
   max-width: 650px;
   margin: 0 auto 40px auto;
   color: #e2e2e2;
-  font-size: 1.1rem;
 }
 
 /* =====================================================
@@ -161,10 +154,8 @@ nav {
   text-decoration: none;
   border-radius: 6px;
   font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
   margin: 10px;
-  border: none;
 }
 
 .btn-primary:hover,
@@ -184,36 +175,24 @@ nav {
 }
 
 /* =====================================================
-   GRID
+   GRID LAYOUT
 ===================================================== */
-.grid-3,
-.grid-4 {
+.grid-3 {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 35px;
   margin-top: 50px;
 }
 
-.grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.grid-4 {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
-
 /* =====================================================
-   CARDS — GOLD TRIM RESTORED
+   GOLD TRIM SERVICE BOXES
 ===================================================== */
 .card {
   background: #ffffff;
   padding: 45px;
   border-radius: 10px;
-
-  border: 2px solid #D4AF37;  /* GOLD TRIM */
-
-  transition: transform 0.3s ease,
-              box-shadow 0.3s ease,
-              border-color 0.3s ease;
+  border: 2px solid #D4AF37;
+  transition: 0.3s ease;
 }
 
 .card:hover {
@@ -227,7 +206,7 @@ nav {
 ===================================================== */
 .contact form {
   max-width: 600px;
-  margin: 0 auto;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -238,18 +217,12 @@ textarea {
   padding: 14px;
   border: 1px solid #ddd;
   border-radius: 6px;
-  font-size: 1rem;
 }
 
 input:focus,
 textarea:focus {
   outline: none;
   border-color: #D4AF37;
-}
-
-textarea {
-  min-height: 120px;
-  resize: vertical;
 }
 
 /* =====================================================
@@ -262,27 +235,18 @@ footer {
   color: #ffffff;
 }
 
-footer p {
-  margin-bottom: 8px;
-  font-size: 0.95rem;
-}
-
 /* =====================================================
-   RESPONSIVE
+   MOBILE RESPONSIVE
 ===================================================== */
 @media (max-width: 768px) {
-
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero {
-    padding: 110px 20px;
-  }
 
   nav {
     flex-direction: column;
     gap: 20px;
+  }
+
+  .logo img {
+    height: 110px;
   }
 
   .nav-links {
@@ -290,15 +254,11 @@ footer p {
     gap: 12px;
   }
 
-  .top-contact {
-    justify-content: center;
+  .hero {
+    padding: 110px 20px;
   }
 
-  .section {
-    padding: 80px 0;
-  }
-
-  .logo img {
-    height: 75px;
+  h1 {
+    font-size: 2.2rem;
   }
 }
