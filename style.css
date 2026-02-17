@@ -1,44 +1,332 @@
 /* =========================
-   SERVICE CARDS – PREMIUM GOLD TRIM
+   RESET
 ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #1F2A44;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+.top-bar {
+  background-color: #0B1F3B;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.top-contact {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.top-contact span {
+  color: #ffffff;
+}
+
+/* =========================
+   HEADER + LOGO
+========================= */
+header {
+  background: #ffffff;
+  border-bottom: 2px solid #C6A85E;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 65px; /* Smaller balanced logo */
+  width: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-left: 35px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #0B1F3B;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #C6A85E;
+  left: 0;
+  bottom: -6px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #C6A85E;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  background: #2F3E55;
+  text-align: center;
+  padding: 140px 20px 110px 20px;
+  color: #ffffff;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-divider {
+  width: 60px;
+  height: 3px;
+  background: #C6A85E;
+  margin: 20px auto 25px auto;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 40px auto;
+  font-size: 1.1rem;
+  color: #E5E8EF;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-primary {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #C6A85E;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #b8964f;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 14px 32px;
+  border: 2px solid #C6A85E;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #C6A85E;
+  color: #ffffff;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+  padding: 100px 0;
+}
+
+.section.light {
+  background: #F3F6FA;
+}
+
+/* =========================
+   GRID
+========================= */
+.grid-3,
+.grid-4 {
+  display: grid;
+  gap: 35px;
+  margin-top: 40px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* =========================
+   SERVICE CARDS – GOLD TRIM
+========================= */
 .card {
   background: #ffffff;
   padding: 40px 35px;
   border-radius: 12px;
-
-  /* Elegant gold border */
   border: 2px solid #C6A85E;
-
-  /* Soft depth */
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
-
   transition: all 0.35s ease;
 }
 
-/* Headings inside cards */
 .card h3 {
   font-family: 'Playfair Display', serif;
-  font-weight: 600;
   font-size: 1.2rem;
-  color: #0B1F3B; /* Deep navy */
+  color: #0B1F3B;
   margin-bottom: 12px;
 }
 
-/* Paragraph text inside cards */
 .card p {
-  font-size: 1rem;
   color: #555;
   line-height: 1.6;
 }
 
-/* Hover effect – premium lift + glow */
 .card:hover {
   transform: translateY(-6px);
-
   border-color: #d4b76a;
-
   box-shadow:
     0 12px 30px rgba(198, 168, 94, 0.25),
     0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+input,
+textarea {
+  padding: 14px;
+  border: 1px solid #D9E2EC;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #C6A85E;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #0B1F3B;
+  text-align: center;
+  padding: 60px 20px;
+  color: #ffffff;
+}
+
+footer p {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .logo img {
+    height: 58px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links a {
+    margin: 8px 0;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .hero {
+    padding: 110px 20px 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
 }
