@@ -7,10 +7,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: 'Inter', sans-serif;
   background-color: #ffffff;
@@ -20,22 +16,51 @@ body {
 }
 
 /* =========================
-   CONTAINER
+   TYPOGRAPHY
 ========================= */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 15px;
 }
 
 /* =========================
-   TOP BAR
+   CONTAINER
+========================= */
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================
+   TOP CONTACT BAR
 ========================= */
 .top-bar {
-  background-color: #0B1F3B;
-  padding: 8px 0;
-  font-size: 0.9rem;
+  background-color: #0B2341;
   color: #ffffff;
+  padding: 10px 0;
+  font-size: 0.9rem;
 }
 
 .top-contact {
@@ -44,32 +69,33 @@ body {
   gap: 15px;
 }
 
-.top-contact span {
+.top-contact a {
   color: #ffffff;
+  text-decoration: none;
+}
+
+.top-contact a:hover {
+  color: #C6A85E;
 }
 
 /* =========================
-   HEADER + LOGO
+   HEADER
 ========================= */
 header {
   background: #ffffff;
-  border-bottom: 2px solid #C6A85E;
+  border-bottom: 3px solid #C6A85E;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 0;
+  padding: 26px 0;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-
+/* LOGO (PROPER SIZE) */
 .logo img {
-  height: 65px; /* Smaller balanced logo */
+  height: 90px;  /* Balanced premium size */
   width: auto;
   max-width: 100%;
   display: block;
@@ -81,16 +107,19 @@ nav {
 ========================= */
 .nav-links {
   display: flex;
-  align-items: center;
 }
 
 .nav-links a {
   margin-left: 35px;
   text-decoration: none;
-  font-weight: 600;
-  color: #0B1F3B;
+  font-weight: 500;
+  color: #1F2A44;
   position: relative;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #C6A85E;
 }
 
 .nav-links a::after {
@@ -108,38 +137,32 @@ nav {
   width: 100%;
 }
 
-.nav-links a:hover {
-  color: #C6A85E;
-}
-
 /* =========================
    HERO
 ========================= */
 .hero {
-  background: #2F3E55;
-  text-align: center;
-  padding: 140px 20px 110px 20px;
+  background: linear-gradient(135deg, #1F2A44, #2E3F5F);
   color: #ffffff;
+  text-align: center;
+  padding: 150px 20px;
 }
 
 .hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .hero-divider {
-  width: 60px;
+  width: 70px;
   height: 3px;
   background: #C6A85E;
-  margin: 20px auto 25px auto;
+  margin: 25px auto;
 }
 
 .hero p {
   max-width: 650px;
   margin: 0 auto 40px auto;
+  color: #e4e4e4;
   font-size: 1.1rem;
-  color: #E5E8EF;
 }
 
 /* =========================
@@ -147,26 +170,25 @@ nav {
 ========================= */
 .btn-primary {
   display: inline-block;
-  padding: 14px 32px;
+  padding: 15px 32px;
   background: #C6A85E;
   color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
-  margin: 10px;
   transition: all 0.3s ease;
+  margin: 10px;
 }
 
 .btn-primary:hover {
   background: #b8964f;
-  transform: translateY(-2px);
 }
 
 .btn-secondary {
   display: inline-block;
-  padding: 14px 32px;
+  padding: 15px 32px;
   border: 2px solid #C6A85E;
-  color: #ffffff;
+  color: #C6A85E;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
@@ -183,11 +205,11 @@ nav {
    SECTIONS
 ========================= */
 .section {
-  padding: 100px 0;
+  padding: 110px 0;
 }
 
 .section.light {
-  background: #F3F6FA;
+  background: #f9fafc;
 }
 
 /* =========================
@@ -209,35 +231,19 @@ nav {
 }
 
 /* =========================
-   SERVICE CARDS – GOLD TRIM
+   CARDS (GOLD OUTLINE)
 ========================= */
 .card {
   background: #ffffff;
-  padding: 40px 35px;
-  border-radius: 12px;
+  padding: 35px;
+  border-radius: 8px;
   border: 2px solid #C6A85E;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
-  transition: all 0.35s ease;
-}
-
-.card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  color: #0B1F3B;
-  margin-bottom: 12px;
-}
-
-.card p {
-  color: #555;
-  line-height: 1.6;
+  transition: all 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  border-color: #d4b76a;
-  box-shadow:
-    0 12px 30px rgba(198, 168, 94, 0.25),
-    0 15px 35px rgba(0, 0, 0, 0.06);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
 }
 
 /* =========================
@@ -254,7 +260,7 @@ nav {
 input,
 textarea {
   padding: 14px;
-  border: 1px solid #D9E2EC;
+  border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 1rem;
 }
@@ -274,13 +280,14 @@ textarea {
    FOOTER
 ========================= */
 footer {
-  background: #0B1F3B;
+  background: #0B2341;
+  color: #ffffff;
   text-align: center;
   padding: 60px 20px;
-  color: #ffffff;
 }
 
 footer p {
+  color: #ffffff;
   margin-bottom: 6px;
   font-size: 0.95rem;
 }
@@ -290,7 +297,7 @@ footer p {
 ========================= */
 @media (max-width: 1024px) {
   .logo img {
-    height: 58px;
+    height: 75px;
   }
 }
 
@@ -298,11 +305,12 @@ footer p {
 
   nav {
     flex-direction: column;
-    gap: 12px;
+    gap: 15px;
   }
 
   .nav-links {
     flex-direction: column;
+    align-items: center;
   }
 
   .nav-links a {
@@ -310,23 +318,22 @@ footer p {
   }
 
   .logo img {
-    height: 50px;
+    height: 65px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
   }
 
   .hero {
-    padding: 110px 20px 80px 20px;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
+    padding: 120px 20px;
   }
 
   .section {
     padding: 80px 0;
   }
 
-  .grid-3,
-  .grid-4 {
-    grid-template-columns: 1fr;
+  .top-contact {
+    justify-content: center;
   }
 }
