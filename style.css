@@ -21,6 +21,7 @@ body {
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
+  color: #ffffff;
 }
 
 h1 {
@@ -31,11 +32,13 @@ h1 {
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  color: #1F2A44;
 }
 
 h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  color: #1F2A44;
 }
 
 p {
@@ -48,17 +51,16 @@ p {
    CONTAINER
 ========================= */
 .container {
-  max-width: 1150px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 /* =========================
    TOP CONTACT BAR
 ========================= */
 .top-bar {
-  background-color: #0B2341;
-  color: #ffffff;
+  background-color: #0D2A4A;
   padding: 10px 0;
   font-size: 0.9rem;
 }
@@ -67,6 +69,7 @@ p {
   display: flex;
   justify-content: flex-end;
   gap: 15px;
+  color: #ffffff;
 }
 
 .top-contact a {
@@ -86,82 +89,79 @@ header {
   border-bottom: 3px solid #C6A85E;
 }
 
+/* FULL WIDTH HEADER ALIGNMENT */
+header .container {
+  max-width: 1400px;
+  padding: 0 40px;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 26px 0;
-}
-
-/* LOGO (PROPER SIZE) */
-.logo img {
-  height: 90px;  /* Balanced premium size */
-  width: auto;
-  max-width: 100%;
-  display: block;
-  object-fit: contain;
+  padding: 15px 0;
 }
 
 /* =========================
-   NAVIGATION
+   LOGO (TOP LEFT, PROPER SIZE)
+========================= */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 130px;   /* Large, confident presence */
+  width: auto;
+  display: block;
+}
+
+/* =========================
+   NAV LINKS
 ========================= */
 .nav-links {
   display: flex;
+  align-items: center;
 }
 
 .nav-links a {
-  margin-left: 35px;
+  margin-left: 40px;
   text-decoration: none;
   font-weight: 500;
-  color: #1F2A44;
-  position: relative;
+  color: #0D2A4A;
   transition: all 0.3s ease;
+  font-size: 1rem;
 }
 
 .nav-links a:hover {
   color: #C6A85E;
 }
 
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: #C6A85E;
-  left: 0;
-  bottom: -6px;
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
 /* =========================
-   HERO
+   HERO SECTION
 ========================= */
 .hero {
-  background: linear-gradient(135deg, #1F2A44, #2E3F5F);
-  color: #ffffff;
+  background: linear-gradient(135deg, #2F405A 0%, #1F2A44 100%);
   text-align: center;
-  padding: 150px 20px;
+  padding: 160px 20px 140px 20px;
 }
 
 .hero h1 {
-  color: #ffffff;
+  max-width: 950px;
+  margin: 0 auto 25px auto;
 }
 
 .hero-divider {
   width: 70px;
   height: 3px;
   background: #C6A85E;
-  margin: 25px auto;
+  margin: 25px auto 35px auto;
 }
 
 .hero p {
   max-width: 650px;
   margin: 0 auto 40px auto;
-  color: #e4e4e4;
+  color: #d4d4d4;
   font-size: 1.1rem;
 }
 
@@ -170,7 +170,7 @@ nav {
 ========================= */
 .btn-primary {
   display: inline-block;
-  padding: 15px 32px;
+  padding: 14px 32px;
   background: #C6A85E;
   color: #ffffff;
   text-decoration: none;
@@ -186,7 +186,7 @@ nav {
 
 .btn-secondary {
   display: inline-block;
-  padding: 15px 32px;
+  padding: 14px 32px;
   border: 2px solid #C6A85E;
   color: #C6A85E;
   text-decoration: none;
@@ -209,7 +209,7 @@ nav {
 }
 
 .section.light {
-  background: #f9fafc;
+  background: #f9f9f9;
 }
 
 /* =========================
@@ -238,12 +238,12 @@ nav {
   padding: 35px;
   border-radius: 8px;
   border: 2px solid #C6A85E;
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 /* =========================
@@ -280,14 +280,13 @@ textarea {
    FOOTER
 ========================= */
 footer {
-  background: #0B2341;
-  color: #ffffff;
+  background: #0D2A4A;
   text-align: center;
   padding: 60px 20px;
+  color: #ffffff;
 }
 
 footer p {
-  color: #ffffff;
   margin-bottom: 6px;
   font-size: 0.95rem;
 }
@@ -297,7 +296,7 @@ footer p {
 ========================= */
 @media (max-width: 1024px) {
   .logo img {
-    height: 75px;
+    height: 110px;
   }
 }
 
@@ -308,17 +307,16 @@ footer p {
     gap: 15px;
   }
 
+  .logo img {
+    height: 90px;
+  }
+
   .nav-links {
     flex-direction: column;
-    align-items: center;
   }
 
   .nav-links a {
-    margin: 8px 0;
-  }
-
-  .logo img {
-    height: 65px;
+    margin: 10px 0;
   }
 
   h1 {
@@ -326,7 +324,7 @@ footer p {
   }
 
   .hero {
-    padding: 120px 20px;
+    padding: 120px 20px 90px 20px;
   }
 
   .section {
