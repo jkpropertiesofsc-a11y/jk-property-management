@@ -79,31 +79,57 @@ p {
 }
 
 /* =====================================================
-   HEADER
+   FLOATING GLASS HEADER
 ===================================================== */
 header {
-  background: #ffffff;  /* clean white behind logo */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.75);
   border-bottom: 2px solid #D4AF37;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
 }
 
+/* =====================================================
+   NAVIGATION
+===================================================== */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 25px 0;
+  position: relative;
 }
 
-/* ===========================
-   LARGE DOMINANT LOGO
-=========================== */
+/* =====================================================
+   LUXURY OVERLAPPING LOGO
+===================================================== */
+.logo {
+  position: relative;
+}
+
 .logo img {
-  height: 140px;       /* Increased size */
+  height: 170px; /* Larger premium size */
   width: auto;
-  display: block;
-  object-fit: contain;
+  position: relative;
+  top: 40px; /* This creates the overlap into hero */
+  z-index: 10;
+
+  /* Gold glow */
+  filter: drop-shadow(0 0 6px rgba(212,175,55,0.6))
+          drop-shadow(0 0 14px rgba(212,175,55,0.4));
+  transition: 0.3s ease;
 }
 
-/* Navigation */
+.logo img:hover {
+  transform: scale(1.03);
+}
+
+/* =====================================================
+   NAV LINKS
+===================================================== */
 .nav-links {
   display: flex;
   gap: 40px;
@@ -126,7 +152,8 @@ nav {
 .hero {
   background: #2F415E;
   text-align: center;
-  padding: 150px 20px;
+  padding: 180px 20px 150px 20px; /* extra top padding for overlap */
+  position: relative;
 }
 
 .hero-divider {
@@ -161,6 +188,7 @@ nav {
 .btn-primary:hover,
 .btn-secondary:hover {
   background: #C39A2C;
+  transform: translateY(-2px);
 }
 
 /* =====================================================
@@ -246,7 +274,8 @@ footer {
   }
 
   .logo img {
-    height: 110px;
+    height: 130px;
+    top: 20px;
   }
 
   .nav-links {
@@ -255,7 +284,7 @@ footer {
   }
 
   .hero {
-    padding: 110px 20px;
+    padding: 150px 20px 110px 20px;
   }
 
   h1 {
