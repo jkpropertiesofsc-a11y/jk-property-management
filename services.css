@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Property Management Services | JK Property Management</title>
+  <meta name="description" content="Professional property management services in Greenville and Anderson County, SC. Structured oversight, maintenance coordination, and transparent reporting.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Main Site Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container top-contact">
+      <span>Phone: (864) 523-4128</span>
+      <span>|</span>
+      <span>jkpropertiesofsc@gmail.com</span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="logo.png" alt="JK Property Management Logo">
+          </a>
+        </div>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="owners.html">Owners</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <h1>Our Property Management Services</h1>
+      <div class="hero-divider"></div>
+      <p>Structured oversight, professional communication, and transparent reporting designed to protect and grow your investment.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="section section-light">
+    <div class="container">
+
+      <h2 style="text-align:center;">Comprehensive Service Coverage</h2>
+      <div class="section-divider"></div>
+
+      <div class="grid-3">
+
+        <div class="card">
+          <h3>Tenant Communication</h3>
+          <p>We serve as the primary point of contact for tenants, ensuring professional, documented communication at all times.</p>
+        </div>
+
+        <div class="card">
+          <h3>Maintenance Coordination</h3>
+          <p>Maintenance requests are tracked, authorized, and coordinated with qualified vendors to protect long-term asset value.</p>
+        </div>
+
+        <div class="card">
+          <h3>Reporting & Documentation</h3>
+          <p>Owners receive structured summaries and detailed records, providing transparency and confidence in all management activity.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="section">
+    <div class="container" style="text-align:center;">
+      <h2>Ready to Partner With a Structured Management Team?</h2>
+      <div class="section-divider"></div>
+      <a href="contact.html" class="btn-primary">Schedule an Owner Consultation</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 JK Property Management of South Carolina, LLC</p>
+  </footer>
+
+</body>
+</html>
