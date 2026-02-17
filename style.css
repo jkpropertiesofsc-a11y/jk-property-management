@@ -1,165 +1,304 @@
-/* ==============================
-   PROCESS SECTION (REFINED)
-============================== */
-
-.process-section {
-  padding: 70px 0;
-  background: #ffffff;
-}
-
-.process-section .container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.process-section h2 {
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.process-section h2::after {
-  content: "";
-  width: 60px;
-  height: 2px;
-  background: #C6A85E;
-  display: block;
-  margin: 14px auto 0;
-}
-
-.process-list {
-  list-style: none;
-  padding: 0;
+/* =========================
+   RESET
+========================= */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.process-list li {
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #1F2A44;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
 
-.process-list li:last-child {
-  border-bottom: none;
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
 }
 
-.process-list strong {
-  display: block;
+h1 {
+  font-size: 3.2rem;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 2.1rem;
+  margin-bottom: 20px;
+  color: #1F2A44;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #1F2A44;
+}
+
+p {
   font-size: 1.05rem;
-  margin-bottom: 6px;
-  color: #0B2545;
-}
-
-
-/* ==============================
-   SERVICE AREA SECTION
-============================== */
-
-.service-area {
-  padding: 60px 0;
-  text-align: center;
-}
-
-.service-area h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.7rem;
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.service-area h3::after {
-  content: "";
-  width: 60px;
-  height: 2px;
-  background: #C6A85E;
-  display: block;
-  margin: 14px auto 0;
-}
-
-.service-area p {
   color: #555;
-  font-weight: 500;
+  margin-bottom: 15px;
 }
 
-
-/* ==============================
-   CONSULTATION SECTION (POLISHED)
-============================== */
-
-.consultation-section {
-  background: #f8f9fb;
-  padding: 80px 0;
-}
-
-.consultation-section .container {
-  max-width: 950px;
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
-.consultation-section h3 {
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.9rem;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.consultation-section h3::after {
-  content: "";
-  width: 60px;
-  height: 2px;
-  background: #C6A85E;
-  display: block;
-  margin: 14px auto 0;
-}
-
-.consultation-form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-}
-
-.consultation-form input,
-.consultation-form textarea {
-  padding: 14px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+/* =========================
+   TOP BAR
+========================= */
+.top-bar {
+  background: #0f2c4f;
+  color: #ffffff;
+  padding: 8px 0;
   font-size: 0.9rem;
 }
 
-.consultation-form textarea {
-  grid-column: span 2;
-  min-height: 100px;
+.top-contact {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
 }
 
-.consultation-form button {
-  background: #C6A85E;
+.top-contact a {
   color: #ffffff;
-  border: none;
-  padding: 14px;
-  border-radius: 6px;
+  text-decoration: none;
+}
+
+.top-contact a:hover {
+  color: #d4af37;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  background: #ffffff;
+  border-bottom: 2px solid #d4af37;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;  /* Reduced padding */
+}
+
+/* Larger premium logo */
+.logo img {
+  height: 85px;   /* Increased size */
+  width: auto;
+  display: block;
+}
+
+/* Navigation */
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  margin-left: 35px;
+  text-decoration: none;
   font-weight: 600;
-  cursor: pointer;
-  transition: 0.25s ease;
-  grid-column: span 2;
+  color: #1F2A44;
+  transition: color 0.3s ease;
 }
 
-.consultation-form button:hover {
-  background: #b5964e;
+.nav-links a:hover {
+  color: #d4af37;
 }
 
+/* =========================
+   HERO (Luxury Gradient)
+========================= */
+.hero {
+  text-align: center;
+  padding: 180px 20px 150px 20px;
 
-/* ==============================
+  background:
+    radial-gradient(circle at top center, #405a7a 0%, #2f3f5a 40%, #1f2a44 100%);
+  color: #ffffff;
+}
+
+.hero-divider {
+  width: 80px;
+  height: 3px;
+  background: #d4af37;
+  margin: 25px auto 35px auto;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 45px auto;
+  color: #e0e0e0;
+  font-size: 1.15rem;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-primary {
+  display: inline-block;
+  padding: 16px 38px;
+  background: #d4af37;
+  color: #1F2A44;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+  background: #c19d2f;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 16px 38px;
+  border: 2px solid #d4af37;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 700;
+  margin: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #d4af37;
+  color: #1F2A44;
+}
+
+/* =========================
+   TRUST STRIP
+========================= */
+.trust-strip {
+  background: #f9f9f9;
+  padding: 60px 0;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.trust-box {
+  padding: 20px;
+}
+
+.trust-box h4 {
+  font-family: 'Playfair Display', serif;
+  color: #1F2A44;
+  margin-bottom: 10px;
+}
+
+.trust-box p {
+  color: #666;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+  padding: 110px 0;
+}
+
+/* =========================
+   GRID
+========================= */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  margin-top: 40px;
+}
+
+/* Gold trimmed cards */
+.card {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: #d4af37;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  transform: translateY(-4px);
+}
+
+/* =========================
+   FOOTER (Refined)
+========================= */
+footer {
+  background: #0f2c4f;
+  color: #ffffff;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+footer p {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+footer .gold-line {
+  width: 70px;
+  height: 2px;
+  background: #d4af37;
+  margin: 20px auto;
+}
+
+/* =========================
    MOBILE
-============================== */
-
+========================= */
 @media (max-width: 768px) {
 
-  .consultation-form textarea,
-  .consultation-form button {
-    grid-column: span 1;
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero {
+    padding: 120px 20px 90px 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo img {
+    height: 70px;
+  }
+
+  .section {
+    padding: 80px 0;
   }
 }
