@@ -12,7 +12,6 @@ body {
   background-color: #ffffff;
   color: #1F2A44;
   line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* =========================
@@ -31,7 +30,6 @@ h1 {
 h2 {
   font-size: 2rem;
   margin-bottom: 25px;
-  color: #1F2A44;
 }
 
 h3 {
@@ -42,7 +40,6 @@ h3 {
 p {
   font-size: 1.05rem;
   color: #555;
-  margin-bottom: 15px;
 }
 
 /* =========================
@@ -55,7 +52,7 @@ p {
 }
 
 /* =========================
-   TOP CONTACT BAR
+   TOP BAR
 ========================= */
 .top-bar {
   background-color: #0E2A47;
@@ -82,24 +79,37 @@ p {
    HEADER
 ========================= */
 header {
+  position: relative;
   background: #ffffff;
   border-bottom: 4px solid #C6A85E;
+  padding-bottom: 60px; /* space for overlap */
 }
 
+/* NAV LAYOUT */
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; /* push nav right */
   align-items: center;
-  padding: 40px 0;
+  padding: 40px 40px 0 40px;
+  position: relative;
+  z-index: 2;
 }
 
-/* 🔥 510PX DOMINANT CREST LOGO */
+/* =========================
+   LEFT CORNER OVERLAP LOGO
+========================= */
+.logo {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  z-index: 3;
+}
+
 .logo img {
   height: 510px;
   width: auto;
   display: block;
   object-fit: contain;
-  background: transparent;
 }
 
 /* =========================
@@ -114,7 +124,7 @@ nav {
   text-decoration: none;
   font-weight: 600;
   color: #1F2A44;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -127,12 +137,7 @@ nav {
 .hero {
   background: #2E405C;
   text-align: center;
-  padding: 200px 20px 160px 20px;
-}
-
-.hero h1 {
-  max-width: 900px;
-  margin: 0 auto 25px auto;
+  padding: 260px 20px 160px 20px; /* extra space for crest */
 }
 
 .hero-divider {
@@ -163,14 +168,13 @@ nav {
   font-weight: 600;
   letter-spacing: 0.5px;
   margin: 12px;
-  transition: all 0.3s ease;
   border: 2px solid #C6A85E;
+  transition: all 0.3s ease;
 }
 
 .btn-primary:hover,
 .btn-secondary:hover {
   background: #b8964f;
-  border-color: #b8964f;
 }
 
 /* =========================
@@ -185,32 +189,24 @@ nav {
 }
 
 /* =========================
-   GRID LAYOUT
+   GRID
 ========================= */
-.grid-3,
-.grid-4 {
+.grid-3 {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
   margin-top: 60px;
 }
 
-.grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.grid-4 {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
 /* =========================
-   SERVICE CARDS WITH GOLD TRIM
+   GOLD TRIM CARDS
 ========================= */
 .card {
   background: #ffffff;
   padding: 45px;
   border-radius: 8px;
   border: 3px solid #C6A85E;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .card:hover {
@@ -234,18 +230,12 @@ textarea {
   padding: 18px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 1rem;
 }
 
 input:focus,
 textarea:focus {
   outline: none;
   border-color: #C6A85E;
-}
-
-textarea {
-  min-height: 150px;
-  resize: vertical;
 }
 
 /* =========================
@@ -258,27 +248,17 @@ footer {
   color: #ffffff;
 }
 
-footer p {
-  margin-bottom: 8px;
-  font-size: 0.95rem;
-}
-
 /* =========================
-   RESPONSIVE MOBILE
+   MOBILE RESPONSIVE
 ========================= */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
 
-  h1 {
-    font-size: 2.2rem;
+  .logo img {
+    height: 300px;
   }
 
   nav {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .logo img {
-    height: 220px;
+    justify-content: center;
   }
 
   .nav-links {
@@ -286,19 +266,26 @@ footer p {
     align-items: center;
   }
 
-  .nav-links a {
-    margin: 12px 0;
+  .hero {
+    padding: 200px 20px 120px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .logo img {
+    height: 220px;
   }
 
-  .top-contact {
-    justify-content: center;
+  header {
+    padding-bottom: 30px;
   }
 
   .hero {
-    padding: 150px 20px 120px 20px;
+    padding: 170px 20px 100px 20px;
   }
 
-  .section {
-    padding: 90px 0;
+  h1 {
+    font-size: 2.2rem;
   }
 }
