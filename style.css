@@ -13,7 +13,6 @@ body {
   color: #1F2A44;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 }
 
 /* =========================
@@ -23,11 +22,10 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
-  position: relative;
 }
 
 /* =========================
-   TOP BAR
+   TOP CONTACT BAR
 ========================= */
 .top-bar {
   background: #0F2747;
@@ -56,37 +54,33 @@ body {
 ========================= */
 header {
   background: #ffffff;
-  position: relative;
-  height: 150px;
   border-bottom: 2px solid #C6A85E;
-  z-index: 5;
 }
 
-/* LOGO – Dominant Crest Style */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* LOGO – Upper Left Placement */
 .logo {
-  position: absolute;
-  top: -90px;          /* lifts into white space */
-  left: 0;
-  z-index: 20;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-  height: 510px;       /* Large luxury presence */
+  height: 260px;   /* Requested size */
   width: auto;
   display: block;
-  filter:
-    drop-shadow(0 0 12px rgba(198,168,94,0.45))
-    drop-shadow(0 10px 25px rgba(0,0,0,0.25));
 }
 
 /* =========================
    NAVIGATION
 ========================= */
-nav {
+.nav-links {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 150px;
 }
 
 .nav-links a {
@@ -107,9 +101,7 @@ nav {
 .hero {
   background: #2F3F5E;
   text-align: center;
-  padding: 160px 20px 120px 20px; /* Reduced height */
-  position: relative;
-  z-index: 1;
+  padding: 140px 20px 120px 20px;
 }
 
 .hero h1 {
@@ -135,7 +127,7 @@ nav {
 }
 
 /* =========================
-   BUTTONS (Matching Gold)
+   BUTTONS
 ========================= */
 .btn-primary,
 .btn-secondary {
@@ -146,8 +138,7 @@ nav {
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
   margin: 10px;
   border: none;
 }
@@ -162,7 +153,7 @@ nav {
    SECTIONS
 ========================= */
 .section {
-  padding: 110px 0;
+  padding: 100px 0;
 }
 
 /* =========================
@@ -184,13 +175,13 @@ nav {
 }
 
 /* =========================
-   CARDS (Gold Trim Restored)
+   CARDS (Gold Trim)
 ========================= */
 .card {
   background: #ffffff;
   padding: 35px;
   border-radius: 8px;
-  border: 2px solid #C6A85E; /* Gold trim */
+  border: 2px solid #C6A85E;
   transition: 0.3s ease;
 }
 
@@ -251,46 +242,25 @@ footer p {
 @media (max-width: 1024px) {
 
   .logo img {
-    height: 380px;
+    height: 200px;
   }
 
-  header {
-    height: 120px;
-  }
-
-  nav {
-    height: 120px;
-  }
-
-  .hero {
-    padding: 140px 20px 100px 20px;
-  }
 }
 
 @media (max-width: 768px) {
 
-  .logo {
-    position: relative;
-    top: 0;
-    text-align: center;
-  }
-
-  .logo img {
-    height: 220px;
-    margin: 0 auto;
-  }
-
   nav {
     flex-direction: column;
-    height: auto;
-    padding: 20px 0;
+    gap: 15px;
   }
 
   .nav-links {
-    display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 15px;
+  }
+
+  .logo img {
+    height: 160px;
   }
 
   .hero {
@@ -300,5 +270,4 @@ footer p {
   .hero h1 {
     font-size: 2rem;
   }
-
 }
