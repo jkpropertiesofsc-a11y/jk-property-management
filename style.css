@@ -1,6 +1,6 @@
-/* =========================
+/* =====================================================
    RESET
-========================= */
+===================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -15,28 +15,28 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* =========================
+/* =====================================================
    TYPOGRAPHY
-========================= */
+===================================================== */
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
-}
-
-h1 {
-  font-size: 3.2rem;
-  line-height: 1.2;
   color: #ffffff;
 }
 
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
 h2 {
-  font-size: 2.1rem;
+  font-size: 2.2rem;
   margin-bottom: 20px;
   color: #1F2A44;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
   color: #1F2A44;
 }
@@ -47,43 +47,43 @@ p {
   margin-bottom: 15px;
 }
 
-/* =========================
+/* =====================================================
    CONTAINER
-========================= */
+===================================================== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 30px;
 }
 
-/* =========================
+/* =====================================================
    TOP BAR
-========================= */
+===================================================== */
 .top-bar {
-  background: #0f2c4f;
-  color: #ffffff;
-  padding: 8px 0;
+  background-color: #0E2A47;
+  padding: 10px 0;
   font-size: 0.9rem;
 }
 
 .top-contact {
   display: flex;
   justify-content: flex-end;
-  gap: 15px;
+  gap: 20px;
 }
 
 .top-contact a {
   color: #ffffff;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .top-contact a:hover {
   color: #d4af37;
 }
 
-/* =========================
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 header {
   background: #ffffff;
   border-bottom: 2px solid #d4af37;
@@ -93,12 +93,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 0;  /* Reduced padding */
+  padding: 22px 0;
 }
 
-/* Larger premium logo */
+/* 30% Larger Premium Logo */
 .logo img {
-  height: 85px;   /* Increased size */
+  height: 110px;
   width: auto;
   display: block;
 }
@@ -106,13 +106,14 @@ nav {
 /* Navigation */
 .nav-links {
   display: flex;
+  gap: 40px;
 }
 
 .nav-links a {
-  margin-left: 35px;
   text-decoration: none;
   font-weight: 600;
   color: #1F2A44;
+  letter-spacing: 0.5px;
   transition: color 0.3s ease;
 }
 
@@ -120,47 +121,63 @@ nav {
   color: #d4af37;
 }
 
-/* =========================
-   HERO (Luxury Gradient)
-========================= */
+/* =====================================================
+   HERO
+===================================================== */
 .hero {
+  background: #2F3E56;
   text-align: center;
-  padding: 180px 20px 150px 20px;
+  padding: 160px 20px 140px 20px;
+}
 
-  background:
-    radial-gradient(circle at top center, #405a7a 0%, #2f3f5a 40%, #1f2a44 100%);
+.hero h1 {
+  max-width: 900px;
+  margin: 0 auto 20px auto;
   color: #ffffff;
 }
 
 .hero-divider {
-  width: 80px;
+  width: 70px;
   height: 3px;
   background: #d4af37;
-  margin: 25px auto 35px auto;
+  margin: 25px auto 30px auto;
 }
 
 .hero p {
-  max-width: 700px;
-  margin: 0 auto 45px auto;
-  color: #e0e0e0;
-  font-size: 1.15rem;
+  max-width: 650px;
+  margin: 0 auto 40px auto;
+  color: #d9d9d9;
+  font-size: 1.1rem;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+/* =====================================================
+   CTA BUTTONS – PERFECTLY MATCHED
+===================================================== */
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px 42px;
+  min-height: 58px;
+
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+
+  border-radius: 6px;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+/* Gold Solid */
 .btn-primary {
-  display: inline-block;
-  padding: 16px 38px;
   background: #d4af37;
   color: #1F2A44;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin: 12px;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  border: 2px solid #d4af37;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .btn-primary:hover {
@@ -168,137 +185,162 @@ nav {
   transform: translateY(-2px);
 }
 
+/* Gold Outline */
 .btn-secondary {
-  display: inline-block;
-  padding: 16px 38px;
-  border: 2px solid #d4af37;
+  background: transparent;
   color: #ffffff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: 700;
-  margin: 12px;
-  transition: all 0.3s ease;
+  border: 2px solid #d4af37;
 }
 
 .btn-secondary:hover {
   background: #d4af37;
   color: #1F2A44;
+  transform: translateY(-2px);
 }
 
-/* =========================
-   TRUST STRIP
-========================= */
-.trust-strip {
-  background: #f9f9f9;
-  padding: 60px 0;
-  text-align: center;
-  border-bottom: 1px solid #eee;
-}
-
-.trust-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  margin-top: 30px;
-}
-
-.trust-box {
-  padding: 20px;
-}
-
-.trust-box h4 {
-  font-family: 'Playfair Display', serif;
-  color: #1F2A44;
-  margin-bottom: 10px;
-}
-
-.trust-box p {
-  color: #666;
-}
-
-/* =========================
+/* =====================================================
    SECTIONS
-========================= */
+===================================================== */
 .section {
-  padding: 110px 0;
+  padding: 120px 0;
 }
 
-/* =========================
+.section.light {
+  background: #f7f8fa;
+}
+
+/* =====================================================
    GRID
-========================= */
+===================================================== */
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 35px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
 }
 
-/* Gold trimmed cards */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+/* =====================================================
+   SERVICE CARDS – GOLD TRIM
+===================================================== */
 .card {
   background: #ffffff;
-  padding: 35px;
+  padding: 40px;
   border-radius: 8px;
-  border: 1px solid #eee;
-  transition: all 0.3s ease;
+  border: 2px solid #d4af37;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  border-color: #d4af37;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
 }
 
-/* =========================
-   FOOTER (Refined)
-========================= */
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+.contact form {
+  max-width: 650px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input,
+textarea {
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
 footer {
-  background: #0f2c4f;
-  color: #ffffff;
+  background: #0E2A47;
   text-align: center;
   padding: 70px 20px;
 }
 
 footer p {
-  margin-bottom: 8px;
+  color: #ffffff;
+  margin-bottom: 6px;
   font-size: 0.95rem;
-  color: #e0e0e0;
 }
 
-footer .gold-line {
-  width: 70px;
-  height: 2px;
-  background: #d4af37;
-  margin: 20px auto;
-}
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+@media (max-width: 992px) {
 
-/* =========================
-   MOBILE
-========================= */
-@media (max-width: 768px) {
-
-  h1 {
-    font-size: 2.3rem;
-  }
-
-  .hero {
-    padding: 120px 20px 90px 20px;
+  .logo img {
+    height: 90px;
   }
 
   nav {
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
   }
 
   .nav-links {
-    flex-direction: column;
-    gap: 10px;
+    gap: 20px;
   }
 
+  .hero {
+    padding: 120px 20px 100px 20px;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+
   .logo img {
-    height: 70px;
+    height: 75px;
+  }
+
+  .hero {
+    padding: 100px 20px 80px 20px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .grid-3,
+  .grid-4 {
+    gap: 25px;
   }
 
   .section {
     padding: 80px 0;
+  }
+
+  .top-contact {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 }
