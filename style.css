@@ -49,9 +49,9 @@ p {
    CONTAINER
 ========================= */
 .container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 40px;
 }
 
 /* =========================
@@ -83,19 +83,19 @@ p {
 ========================= */
 header {
   background: #ffffff;
-  border-bottom: 3px solid #C6A85E;
+  border-bottom: 4px solid #C6A85E;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 35px 0;
+  padding: 40px 0;
 }
 
-/* 🔥 DOMINANT LUXURY LOGO */
+/* 🔥 510PX DOMINANT CREST LOGO */
 .logo img {
-  height: 210px;
+  height: 510px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -127,7 +127,7 @@ nav {
 .hero {
   background: #2E405C;
   text-align: center;
-  padding: 160px 20px 140px 20px;
+  padding: 200px 20px 160px 20px;
 }
 
 .hero h1 {
@@ -136,10 +136,10 @@ nav {
 }
 
 .hero-divider {
-  width: 80px;
+  width: 90px;
   height: 3px;
   background: #C6A85E;
-  margin: 30px auto 35px auto;
+  margin: 30px auto 40px auto;
 }
 
 .hero p {
@@ -155,14 +155,14 @@ nav {
 .btn-primary,
 .btn-secondary {
   display: inline-block;
-  padding: 16px 38px;
+  padding: 18px 42px;
   background: #C6A85E;
   color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
   letter-spacing: 0.5px;
-  margin: 10px;
+  margin: 12px;
   transition: all 0.3s ease;
   border: 2px solid #C6A85E;
 }
@@ -177,7 +177,7 @@ nav {
    SECTIONS
 ========================= */
 .section {
-  padding: 110px 0;
+  padding: 120px 0;
 }
 
 .section.light {
@@ -190,8 +190,8 @@ nav {
 .grid-3,
 .grid-4 {
   display: grid;
-  gap: 35px;
-  margin-top: 50px;
+  gap: 40px;
+  margin-top: 60px;
 }
 
 .grid-3 {
@@ -207,31 +207,31 @@ nav {
 ========================= */
 .card {
   background: #ffffff;
-  padding: 40px;
+  padding: 45px;
   border-radius: 8px;
-  border: 2px solid #C6A85E;
+  border: 3px solid #C6A85E;
   transition: all 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.1);
 }
 
 /* =========================
    CONTACT FORM
 ========================= */
 .contact form {
-  max-width: 650px;
+  max-width: 700px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
 }
 
 input,
 textarea {
-  padding: 16px;
+  padding: 18px;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 1rem;
@@ -244,7 +244,7 @@ textarea:focus {
 }
 
 textarea {
-  min-height: 140px;
+  min-height: 150px;
   resize: vertical;
 }
 
@@ -254,7 +254,7 @@ textarea {
 footer {
   background: #0E2A47;
   text-align: center;
-  padding: 70px 20px;
+  padding: 80px 20px;
   color: #ffffff;
 }
 
@@ -274,11 +274,11 @@ footer p {
 
   nav {
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
   }
 
   .logo img {
-    height: 160px;
+    height: 220px;
   }
 
   .nav-links {
@@ -287,7 +287,7 @@ footer p {
   }
 
   .nav-links a {
-    margin: 10px 0;
+    margin: 12px 0;
   }
 
   .top-contact {
@@ -295,10 +295,10 @@ footer p {
   }
 
   .hero {
-    padding: 120px 20px 100px 20px;
+    padding: 150px 20px 120px 20px;
   }
 
   .section {
-    padding: 80px 0;
+    padding: 90px 0;
   }
 }
