@@ -21,7 +21,7 @@ body {
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
-  color: #ffffff;
+  color: #1F2A44;
 }
 
 h1 {
@@ -30,15 +30,13 @@ h1 {
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: 20px;
-  color: #1F2A44;
 }
 
 h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  color: #1F2A44;
 }
 
 p {
@@ -63,6 +61,7 @@ p {
   background-color: #0E2A47;
   padding: 10px 0;
   font-size: 0.9rem;
+  color: #ffffff;
 }
 
 .top-contact {
@@ -78,7 +77,7 @@ p {
 }
 
 .top-contact a:hover {
-  color: #d4af37;
+  color: #D4AF37;
 }
 
 /* =====================================================
@@ -86,19 +85,19 @@ p {
 ===================================================== */
 header {
   background: #ffffff;
-  border-bottom: 2px solid #d4af37;
+  border-bottom: 2px solid #D4AF37;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 0;
+  padding: 25px 0;
 }
 
-/* 30% Larger Premium Logo */
+/* 50% Larger Logo */
 .logo img {
-  height: 110px;
+  height: 90px;
   width: auto;
   display: block;
 }
@@ -113,140 +112,121 @@ nav {
   text-decoration: none;
   font-weight: 600;
   color: #1F2A44;
-  letter-spacing: 0.5px;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #d4af37;
+  color: #D4AF37;
 }
 
 /* =====================================================
    HERO
 ===================================================== */
 .hero {
-  background: #2F3E56;
+  background: #2F415E;
   text-align: center;
-  padding: 160px 20px 140px 20px;
-}
-
-.hero h1 {
-  max-width: 900px;
-  margin: 0 auto 20px auto;
+  padding: 150px 20px;
   color: #ffffff;
 }
 
+.hero h1 {
+  color: #ffffff;
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+}
+
 .hero-divider {
-  width: 70px;
+  width: 80px;
   height: 3px;
-  background: #d4af37;
-  margin: 25px auto 30px auto;
+  background: #D4AF37;
+  margin: 25px auto;
 }
 
 .hero p {
   max-width: 650px;
   margin: 0 auto 40px auto;
-  color: #d9d9d9;
+  color: #e2e2e2;
   font-size: 1.1rem;
 }
 
 /* =====================================================
-   CTA BUTTONS – PERFECTLY MATCHED
+   BUTTONS (MATCHING GOLD)
 ===================================================== */
 .btn-primary,
 .btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 18px 42px;
-  min-height: 58px;
-
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-
-  border-radius: 6px;
-  text-decoration: none;
-
-  transition: all 0.3s ease;
-}
-
-/* Gold Solid */
-.btn-primary {
-  background: #d4af37;
-  color: #1F2A44;
-  border: 2px solid #d4af37;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-
-.btn-primary:hover {
-  background: #c19d2f;
-  transform: translateY(-2px);
-}
-
-/* Gold Outline */
-.btn-secondary {
-  background: transparent;
+  display: inline-block;
+  padding: 16px 36px;
+  background: #D4AF37;
   color: #ffffff;
-  border: 2px solid #d4af37;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  margin: 10px;
+  border: none;
 }
 
+.btn-primary:hover,
 .btn-secondary:hover {
-  background: #d4af37;
-  color: #1F2A44;
-  transform: translateY(-2px);
+  background: #C39A2C;
 }
 
 /* =====================================================
    SECTIONS
 ===================================================== */
 .section {
-  padding: 120px 0;
+  padding: 110px 0;
 }
 
 .section.light {
-  background: #f7f8fa;
+  background: #f8f8f8;
 }
 
 /* =====================================================
    GRID
 ===================================================== */
-.grid-3 {
+.grid-3,
+.grid-4 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+  gap: 35px;
   margin-top: 50px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .grid-4 {
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 40px;
-  margin-top: 50px;
 }
 
 /* =====================================================
-   SERVICE CARDS – GOLD TRIM
+   CARDS — GOLD TRIM RESTORED
 ===================================================== */
 .card {
   background: #ffffff;
-  padding: 40px;
-  border-radius: 8px;
-  border: 2px solid #d4af37;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 45px;
+  border-radius: 10px;
+
+  border: 2px solid #D4AF37;  /* GOLD TRIM */
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+  border-color: #C39A2C;
 }
 
 /* =====================================================
    CONTACT FORM
 ===================================================== */
 .contact form {
-  max-width: 650px;
+  max-width: 600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -255,8 +235,8 @@ nav {
 
 input,
 textarea {
-  padding: 16px;
-  border: 1px solid #ccc;
+  padding: 14px;
+  border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 1rem;
 }
@@ -264,11 +244,11 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: #d4af37;
+  border-color: #D4AF37;
 }
 
 textarea {
-  min-height: 130px;
+  min-height: 120px;
   resize: vertical;
 }
 
@@ -278,22 +258,26 @@ textarea {
 footer {
   background: #0E2A47;
   text-align: center;
-  padding: 70px 20px;
+  padding: 60px 20px;
+  color: #ffffff;
 }
 
 footer p {
-  color: #ffffff;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   font-size: 0.95rem;
 }
 
 /* =====================================================
-   MOBILE RESPONSIVE
+   RESPONSIVE
 ===================================================== */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
 
-  .logo img {
-    height: 90px;
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero {
+    padding: 110px 20px;
   }
 
   nav {
@@ -302,45 +286,19 @@ footer p {
   }
 
   .nav-links {
-    gap: 20px;
+    flex-direction: column;
+    gap: 12px;
   }
 
-  .hero {
-    padding: 120px 20px 100px 20px;
-  }
-
-  h1 {
-    font-size: 2.3rem;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .logo img {
-    height: 75px;
-  }
-
-  .hero {
-    padding: 100px 20px 80px 20px;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-  }
-
-  .grid-3,
-  .grid-4 {
-    gap: 25px;
+  .top-contact {
+    justify-content: center;
   }
 
   .section {
     padding: 80px 0;
   }
 
-  .top-contact {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
+  .logo img {
+    height: 75px;
   }
 }
