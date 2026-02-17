@@ -1,148 +1,137 @@
 /* ==============================
-   PROCESS SECTION (UPGRADE)
+   PROCESS SECTION (REFINED)
 ============================== */
 
 .process-section {
-  background: #f5f7fa;
-  padding: 90px 60px;
+  padding: 70px 0;
+  background: #ffffff;
 }
 
-.process-container {
-  max-width: 1100px;
+.process-section .container {
+  max-width: 900px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
+  padding: 0 20px;
 }
 
 .process-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.3rem;
   text-align: center;
-  margin-bottom: 70px;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 40px;
   position: relative;
 }
 
 .process-section h2::after {
   content: "";
-  width: 70px;
-  height: 3px;
+  width: 60px;
+  height: 2px;
   background: #C6A85E;
   display: block;
-  margin: 18px auto 0;
+  margin: 14px auto 0;
 }
 
-/* Vertical timeline style */
 .process-list {
   list-style: none;
-  position: relative;
-  padding-left: 30px;
-}
-
-.process-list::before {
-  content: "";
-  position: absolute;
-  left: 8px;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: #C6A85E;
+  padding: 0;
+  margin: 0;
 }
 
 .process-list li {
-  margin-bottom: 40px;
-  position: relative;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-.process-list li::before {
-  content: "";
-  position: absolute;
-  left: -5px;
-  top: 6px;
-  width: 14px;
-  height: 14px;
-  background: #0B2545;
-  border: 3px solid #C6A85E;
-  border-radius: 50%;
+.process-list li:last-child {
+  border-bottom: none;
 }
 
 .process-list strong {
   display: block;
   font-size: 1.05rem;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   color: #0B2545;
 }
+
 
 /* ==============================
    SERVICE AREA SECTION
 ============================== */
 
 .service-area {
+  padding: 60px 0;
   text-align: center;
-  padding: 70px 20px;
-  background: #ffffff;
-  border-top: 1px solid #eee;
 }
 
 .service-area h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   margin-bottom: 15px;
+  position: relative;
+}
+
+.service-area h3::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: #C6A85E;
+  display: block;
+  margin: 14px auto 0;
 }
 
 .service-area p {
-  font-weight: 500;
   color: #555;
-  letter-spacing: 0.5px;
+  font-weight: 500;
 }
 
+
 /* ==============================
-   CONSULTATION SECTION (LUXURY FRAME)
+   CONSULTATION SECTION (POLISHED)
 ============================== */
 
 .consultation-section {
-  background: #0B2545;
-  padding: 100px 60px;
-  color: #ffffff;
-  text-align: center;
+  background: #f8f9fb;
+  padding: 80px 0;
+}
+
+.consultation-section .container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .consultation-section h3 {
+  text-align: center;
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  margin-bottom: 50px;
+  font-size: 1.9rem;
+  margin-bottom: 40px;
   position: relative;
 }
 
 .consultation-section h3::after {
   content: "";
-  width: 70px;
-  height: 3px;
+  width: 60px;
+  height: 2px;
   background: #C6A85E;
   display: block;
-  margin: 18px auto 0;
+  margin: 14px auto 0;
 }
 
 .consultation-form {
-  max-width: 950px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
+  gap: 18px;
 }
 
 .consultation-form input,
 .consultation-form textarea {
-  padding: 15px;
+  padding: 14px;
+  border: 1px solid #ddd;
   border-radius: 6px;
-  border: none;
   font-size: 0.9rem;
 }
 
 .consultation-form textarea {
   grid-column: span 2;
-  resize: none;
   min-height: 100px;
 }
 
@@ -150,29 +139,24 @@
   background: #C6A85E;
   color: #ffffff;
   border: none;
-  padding: 15px;
+  padding: 14px;
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.25s ease;
   grid-column: span 2;
 }
 
 .consultation-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(198,168,94,0.4);
+  background: #b5964e;
 }
 
+
 /* ==============================
-   MOBILE FIX
+   MOBILE
 ============================== */
 
 @media (max-width: 768px) {
-
-  .process-container {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
 
   .consultation-form textarea,
   .consultation-form button {
