@@ -10,7 +10,7 @@
 body {
   font-family: 'Inter', sans-serif;
   background-color: #ffffff;
-  color: #1F2A44;
+  color: #0D2A4A;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
@@ -32,13 +32,13 @@ h1 {
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #1F2A44;
+  color: #0D2A4A;
 }
 
 h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  color: #1F2A44;
+  color: #0D2A4A;
 }
 
 p {
@@ -51,9 +51,9 @@ p {
    CONTAINER
 ========================= */
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 60px;
 }
 
 /* =========================
@@ -87,23 +87,18 @@ p {
 header {
   background: #ffffff;
   border-bottom: 3px solid #C6A85E;
-}
-
-/* FULL WIDTH HEADER ALIGNMENT */
-header .container {
-  max-width: 1400px;
-  padding: 0 40px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  padding: 10px 0;
 }
 
 /* =========================
-   LOGO (TOP LEFT, PROPER SIZE)
+   LOGO
 ========================= */
 .logo {
   display: flex;
@@ -111,13 +106,18 @@ nav {
 }
 
 .logo img {
-  height: 130px;   /* Large, confident presence */
+  height: 165px;
   width: auto;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.03);
 }
 
 /* =========================
-   NAV LINKS
+   NAVIGATION
 ========================= */
 .nav-links {
   display: flex;
@@ -125,12 +125,13 @@ nav {
 }
 
 .nav-links a {
-  margin-left: 40px;
+  margin-left: 45px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   color: #0D2A4A;
-  transition: all 0.3s ease;
   font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -141,27 +142,27 @@ nav {
    HERO SECTION
 ========================= */
 .hero {
-  background: linear-gradient(135deg, #2F405A 0%, #1F2A44 100%);
+  background: #2E3F5F;
   text-align: center;
   padding: 160px 20px 140px 20px;
 }
 
 .hero h1 {
-  max-width: 950px;
-  margin: 0 auto 25px auto;
+  max-width: 900px;
+  margin: 0 auto 20px auto;
 }
 
 .hero-divider {
   width: 70px;
   height: 3px;
   background: #C6A85E;
-  margin: 25px auto 35px auto;
+  margin: 25px auto 30px auto;
 }
 
 .hero p {
   max-width: 650px;
   margin: 0 auto 40px auto;
-  color: #d4d4d4;
+  color: #d9d9d9;
   font-size: 1.1rem;
 }
 
@@ -170,12 +171,13 @@ nav {
 ========================= */
 .btn-primary {
   display: inline-block;
-  padding: 14px 32px;
+  padding: 14px 30px;
   background: #C6A85E;
   color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
+  letter-spacing: 0.5px;
   transition: all 0.3s ease;
   margin: 10px;
 }
@@ -186,9 +188,9 @@ nav {
 
 .btn-secondary {
   display: inline-block;
-  padding: 14px 32px;
+  padding: 14px 30px;
   border: 2px solid #C6A85E;
-  color: #C6A85E;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
@@ -206,10 +208,7 @@ nav {
 ========================= */
 .section {
   padding: 110px 0;
-}
-
-.section.light {
-  background: #f9f9f9;
+  background: #ffffff;
 }
 
 /* =========================
@@ -231,19 +230,19 @@ nav {
 }
 
 /* =========================
-   CARDS (GOLD OUTLINE)
+   CARDS
 ========================= */
 .card {
   background: #ffffff;
   padding: 35px;
   border-radius: 8px;
   border: 2px solid #C6A85E;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
 }
 
 /* =========================
@@ -287,6 +286,7 @@ footer {
 }
 
 footer p {
+  color: #ffffff;
   margin-bottom: 6px;
   font-size: 0.95rem;
 }
@@ -295,20 +295,22 @@ footer p {
    RESPONSIVE
 ========================= */
 @media (max-width: 1024px) {
+
   .logo img {
-    height: 110px;
+    height: 130px;
   }
+
 }
 
 @media (max-width: 768px) {
 
+  .container {
+    padding: 0 25px;
+  }
+
   nav {
     flex-direction: column;
     gap: 15px;
-  }
-
-  .logo img {
-    height: 90px;
   }
 
   .nav-links {
@@ -316,22 +318,19 @@ footer p {
   }
 
   .nav-links a {
-    margin: 10px 0;
+    margin: 8px 0;
   }
 
-  h1 {
-    font-size: 2.2rem;
+  .logo img {
+    height: 110px;
   }
 
   .hero {
     padding: 120px 20px 90px 20px;
   }
 
-  .section {
-    padding: 80px 0;
+  h1 {
+    font-size: 2.2rem;
   }
 
-  .top-contact {
-    justify-content: center;
-  }
 }
