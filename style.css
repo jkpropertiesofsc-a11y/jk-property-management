@@ -1,6 +1,6 @@
-/* =========================
-   GLOBAL RESET
-========================= */
+/* ===============================
+   GLOBAL
+================================ */
 * {
   margin: 0;
   padding: 0;
@@ -14,15 +14,9 @@ body {
   line-height: 1.7;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 30px;
-}
-
-/* =========================
+/* ===============================
    TOP BAR
-========================= */
+================================ */
 .top-bar {
   background: #0B2545;
   color: #ffffff;
@@ -31,19 +25,32 @@ body {
   font-size: 0.9rem;
 }
 
-/* =========================
+/* ===============================
    HEADER
-========================= */
+================================ */
 header {
   background: #ffffff;
   border-bottom: 3px solid #C6A85E;
-  padding: 20px 0;
+  padding: 20px 40px;
+  position: relative;
 }
 
+/* NAV LAYOUT */
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+}
+
+/* ===============================
+   LUXURY LOGO FIX
+================================ */
+.logo {
+  position: absolute;
+  top: -20px;              /* subtle overlap for luxury presence */
+  left: 40px;              /* flush left alignment */
+  z-index: 10;
 }
 
 .logo img {
@@ -52,10 +59,11 @@ nav {
   display: block;
 }
 
-/* =========================
+/* ===============================
    NAV LINKS
-========================= */
+================================ */
 .nav-links {
+  margin-left: auto;
   display: flex;
   gap: 40px;
 }
@@ -74,36 +82,87 @@ nav {
   color: #C6A85E;
 }
 
-/* =========================
-   SECTION SPACING
-========================= */
-section {
-  padding: 90px 0;
+/* ===============================
+   HERO SECTION
+================================ */
+.hero {
+  background: #374766;
+  color: #ffffff;
+  text-align: center;
+  padding: 120px 20px;
 }
 
-h2 {
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+}
+
+/* ===============================
+   BUTTONS (Luxury Gold)
+================================ */
+.btn-primary,
+.btn-secondary {
+  padding: 14px 28px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: #C6A85E;
+  color: #ffffff;
+  border: 2px solid #C6A85E;
+}
+
+.btn-primary:hover {
+  background: #b8964f;
+}
+
+.btn-secondary {
+  background: #C6A85E;
+  color: #ffffff;
+  border: 2px solid #C6A85E;
+  margin-left: 15px;
+}
+
+.btn-secondary:hover {
+  background: #b8964f;
+}
+
+/* ===============================
+   SERVICES SECTION
+================================ */
+section {
+  padding: 90px 40px;
+}
+
+section h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.2rem;
-  margin-bottom: 30px;
-  color: #0B2545;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
-/* =========================
-   SERVICES CARDS
-========================= */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  margin-top: 40px;
 }
 
 .card {
   background: #ffffff;
   padding: 35px;
-  border-radius: 10px;
-  border: 2px solid #C6A85E;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  border: 2px solid #C6A85E;   /* gold trim restored */
   transition: 0.3s ease;
 }
 
@@ -112,71 +171,68 @@ h2 {
 }
 
 .card h3 {
-  margin-bottom: 15px;
   font-family: 'Playfair Display', serif;
-  color: #0B2545;
+  margin-bottom: 15px;
 }
 
-/* =========================
+/* ===============================
    PROCESS SECTION
-========================= */
-.process-list {
-  margin-top: 30px;
+================================ */
+.process-section {
+  background: #f8f8f8;
 }
 
-.process-item {
-  margin-bottom: 25px;
+.process-section ul {
+  max-width: 800px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.process-section li {
+  margin-bottom: 20px;
   padding-left: 20px;
   border-left: 4px solid #C6A85E;
 }
 
-.process-item h4 {
-  margin-bottom: 8px;
-  color: #0B2545;
-}
-
-/* =========================
-   CONSULTATION FORM
-========================= */
+/* ===============================
+   CONSULTATION SECTION
+================================ */
 .consultation-section {
-  background: #f8f8f8;
+  background: #ffffff;
+  padding: 80px 40px;
   border-top: 3px solid #C6A85E;
-  padding: 70px 0;
 }
 
 .consultation-form {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   margin-top: 30px;
 }
 
 .consultation-form input {
-  padding: 14px;
-  border-radius: 5px;
+  padding: 12px;
   border: 1px solid #ddd;
-  font-size: 0.95rem;
+  border-radius: 4px;
 }
 
 .consultation-form button {
-  padding: 14px;
-  border: none;
   background: #C6A85E;
   color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
   font-weight: 600;
-  letter-spacing: 1px;
-  border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s ease;
 }
 
 .consultation-form button:hover {
   background: #b8964f;
 }
 
-/* =========================
+/* ===============================
    FOOTER
-========================= */
+================================ */
 footer {
   background: #0B2545;
   color: #ffffff;
@@ -184,19 +240,23 @@ footer {
   padding: 60px 20px;
 }
 
-/* =========================
+/* ===============================
    RESPONSIVE
-========================= */
+================================ */
 @media (max-width: 768px) {
 
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+  .logo {
+    position: static;
+    margin-bottom: 15px;
   }
 
   .logo img {
     width: 240px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .nav-links {
@@ -204,7 +264,11 @@ footer {
     gap: 20px;
   }
 
-  section {
-    padding: 60px 0;
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
   }
 }
