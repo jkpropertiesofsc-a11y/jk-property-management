@@ -1,312 +1,181 @@
-/* =================================
-   GLOBAL RESET
-================================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ==============================
+   PROCESS SECTION (UPGRADE)
+============================== */
+
+.process-section {
+  background: #f5f7fa;
+  padding: 90px 60px;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: #ffffff;
-  color: #1c2a44;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
+.process-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
 }
 
-/* =================================
-   TOP BAR
-================================= */
-.top-bar {
-  background: #0B2545;
-  color: #ffffff;
-  padding: 12px 60px;
-  text-align: right;
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
-}
-
-/* =================================
-   HEADER
-================================= */
-header {
-  background: #ffffff;
-  border-bottom: 2px solid #C6A85E;
-  padding: 25px 60px;
-  position: relative;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* LOGO (kept where it is) */
-.logo img {
-  width: 310px;
-  height: auto;
-  display: block;
-}
-
-/* NAV LINKS */
-.nav-links {
-  display: flex;
-  gap: 50px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #0B2545;
-  position: relative;
-  transition: 0.3s ease;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: #C6A85E;
-  left: 0;
-  bottom: -5px;
-  transition: 0.3s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-/* =================================
-   HERO SECTION (Luxury Upgrade)
-================================= */
-.hero {
-  background: linear-gradient(135deg, #1e3355 0%, #2f466e 100%);
-  color: #ffffff;
-  text-align: center;
-  padding: 160px 20px;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 6px;
-  background: #C6A85E;
-}
-
-.hero h1 {
+.process-section h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.4rem;
-  margin-bottom: 25px;
-  letter-spacing: 0.5px;
-}
-
-.hero p {
-  max-width: 720px;
-  margin: 0 auto 45px;
-  font-size: 1.15rem;
-  opacity: 0.9;
-}
-
-/* BUTTONS */
-.btn-primary,
-.btn-secondary {
-  padding: 16px 34px;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s ease;
-  font-size: 0.95rem;
-  letter-spacing: 0.5px;
-}
-
-.btn-primary {
-  background: #C6A85E;
-  color: #ffffff;
-  border: none;
-  box-shadow: 0 6px 18px rgba(198,168,94,0.35);
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(198,168,94,0.4);
-}
-
-.btn-secondary {
-  background: transparent;
-  border: 2px solid #C6A85E;
-  color: #ffffff;
-  margin-left: 20px;
-}
-
-.btn-secondary:hover {
-  background: #C6A85E;
-  color: #ffffff;
-}
-
-/* =================================
-   SERVICES SECTION
-================================= */
-section {
-  padding: 110px 60px;
-}
-
-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
   position: relative;
 }
 
-section h2::after {
+.process-section h2::after {
   content: "";
-  width: 80px;
+  width: 70px;
   height: 3px;
   background: #C6A85E;
   display: block;
   margin: 18px auto 0;
 }
 
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
+/* Vertical timeline style */
+.process-list {
+  list-style: none;
+  position: relative;
+  padding-left: 30px;
 }
 
-.card {
-  background: #ffffff;
-  padding: 45px 35px;
-  border-radius: 8px;
-  border: 1px solid #e8e8e8;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
-  transition: 0.3s ease;
+.process-list::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #C6A85E;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.08);
-  border-color: #C6A85E;
+.process-list li {
+  margin-bottom: 40px;
+  position: relative;
 }
 
-.card h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 15px;
-  font-size: 1.2rem;
+.process-list li::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: #0B2545;
+  border: 3px solid #C6A85E;
+  border-radius: 50%;
+}
+
+.process-list strong {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 5px;
   color: #0B2545;
 }
 
-/* =================================
-   PROCESS SECTION
-================================= */
-.process-section {
-  background: #f8f9fb;
-}
+/* ==============================
+   SERVICE AREA SECTION
+============================== */
 
-.process-section ul {
-  max-width: 850px;
-  margin: 0 auto;
-  list-style: none;
-}
-
-.process-section li {
-  margin-bottom: 25px;
-  padding-left: 25px;
-  border-left: 4px solid #C6A85E;
-  font-weight: 500;
-}
-
-/* =================================
-   CONSULTATION SECTION
-================================= */
-.consultation-section {
+.service-area {
+  text-align: center;
+  padding: 70px 20px;
   background: #ffffff;
+  border-top: 1px solid #eee;
+}
+
+.service-area h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.service-area p {
+  font-weight: 500;
+  color: #555;
+  letter-spacing: 0.5px;
+}
+
+/* ==============================
+   CONSULTATION SECTION (LUXURY FRAME)
+============================== */
+
+.consultation-section {
+  background: #0B2545;
   padding: 100px 60px;
-  border-top: 3px solid #C6A85E;
+  color: #ffffff;
+  text-align: center;
+}
+
+.consultation-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.consultation-section h3::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background: #C6A85E;
+  display: block;
+  margin: 18px auto 0;
 }
 
 .consultation-form {
+  max-width: 950px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
-  margin-top: 35px;
 }
 
-.consultation-form input {
-  padding: 14px;
+.consultation-form input,
+.consultation-form textarea {
+  padding: 15px;
   border-radius: 6px;
-  border: 1px solid #ddd;
+  border: none;
   font-size: 0.9rem;
 }
 
-.consultation-form input:focus {
-  border-color: #C6A85E;
-  outline: none;
+.consultation-form textarea {
+  grid-column: span 2;
+  resize: none;
+  min-height: 100px;
 }
 
 .consultation-form button {
   background: #C6A85E;
   color: #ffffff;
   border: none;
-  padding: 14px;
+  padding: 15px;
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s ease;
+  grid-column: span 2;
 }
 
 .consultation-form button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(198,168,94,0.35);
+  box-shadow: 0 10px 25px rgba(198,168,94,0.4);
 }
 
-/* =================================
-   FOOTER
-================================= */
-footer {
-  background: #0B2545;
-  color: #ffffff;
-  text-align: center;
-  padding: 70px 20px;
-  font-size: 0.9rem;
-}
+/* ==============================
+   MOBILE FIX
+============================== */
 
-/* =================================
-   MOBILE
-================================= */
 @media (max-width: 768px) {
 
-  header {
-    padding: 20px 25px;
+  .process-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
   }
 
-  .logo img {
-    width: 240px;
-  }
-
-  .nav-links {
-    gap: 20px;
-  }
-
-  .hero {
-    padding: 100px 20px;
-  }
-
-  .hero h1 {
-    font-size: 2.3rem;
-  }
-
-  section {
-    padding: 80px 25px;
+  .consultation-form textarea,
+  .consultation-form button {
+    grid-column: span 1;
   }
 }
